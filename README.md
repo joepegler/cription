@@ -18,7 +18,7 @@ Sample 1:
 	//encryptionOptions.key is optional.. Will be automated if not provided. 
 	//encryptionOptions.key must be 16, 24 or 32 characters long & hexadecimal.
 	//encryptionOptions.store is optional and defaults to false. 
-	//If set to true the key will be saved to localStorage("key")
+	//encryptionOptions.store == true saves the key to localStorage("key").
 
 	var encrypted_secret = myCription.encrypt(encryptionOptions);
 
