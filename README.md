@@ -10,11 +10,17 @@ Sample 1:
 ```javascript
 	var myCription = new Cription();
 	var encryptionOptions = {
-		secret : 	"mySecret",						//required
-		key :		"i0sq4mL5Ud6ZF6Qz", 	//optional: will be auto-generated if not set. Keys must be 16,24 or 32 characters long
-		store : 	false							//optional: key saved to local storage if true
+		secret : 	"mySecret",						
+		key :		"i0sq4mL5Ud6ZF6Qz", 			
+		store : 	false							
 	};
+	//encryptionOptions.secret is mandatory
+	//encryptionOptions.key is optional and will be auto-generated if not manually provided. 
+	//encryptionOptions.key must be 16, 24 or 32 characters long
+	//encryptionOptions.store is optional and defaults to false. If set to true the key will be saved to localStorage("key")
+
 	myCription.encrypt(encryptionOptions);
+
 	var decryptionOptions = {
 		secret : 	[147, 67, 167, 245, 65, 92, 194, 142, 2, 230, 201, 239, 22, 235, 234, 67],
 		key : 		"i0sq4mL5Ud6ZF6Qz",				//optional if encryptOptions.store == true
@@ -26,6 +32,11 @@ Sample 2:
 
 ```javascript
 	var myCription = new Cription();
-	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true}); 	//Generates a random key and stores it to "localStorage.key". 
-	var decrypted_secret = myCription.decrypt({secret:encrypted_secret});		//decrypts the encrypted secret with key stored in "localStorage.key"
+
+	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true}); 	
+	//Generates a random key and stores it to "localStorage.key". 
+	//Auto-generated keys will print to console.log on encryption.
+
+	var decrypted_secret = myCription.decrypt({secret:encrypted_secret});		
+	//decrypts the encrypted secret with key stored in "localStorage.key"
 ```
