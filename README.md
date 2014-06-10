@@ -15,16 +15,18 @@ Sample 1:
 		store : 	false							
 	};
 	//encryptionOptions.secret is mandatory
-	//encryptionOptions.key is optional and will be auto-generated if not manually provided. 
+	//encryptionOptions.key is optional.. Will be automated if not provided. 
 	//encryptionOptions.key must be 16, 24 or 32 characters long & hexadecimal.
-	//encryptionOptions.store is optional and defaults to false. If set to true the key will be saved to localStorage("key")
+	//encryptionOptions.store is optional and defaults to false. 
+	//If set to true the key will be saved to localStorage("key")
 
 	var encrypted_secret = myCription.encrypt(encryptionOptions);
 
 	var decryptionOptions = {
 		secret : 	encrypted_secret,
-		key : 		"myEncryptionKey1",				//optional if encryptOptions.store == true
+		key : 		"myEncryptionKey1",				
 	}
+	//decryptionOptions.key is optional if encryptionOptions.key has has been stored.
 	var decrypted_secret = myCription.decrypt(decryptionOptions);
 ```
 
