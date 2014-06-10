@@ -1,7 +1,7 @@
-cription
+Cription
 ========
 
-Javascript Aes encryption library
+Javascript AES encryption library
 
 A helper library based on the excellent implementation of the AES block cipher: http://point-at-infinity.org/jsaes/
 
