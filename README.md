@@ -12,26 +12,6 @@ Cription.decrypt(...);
 Cription.generateKey(...);
 ```
 Sample 1:
-
-```javascript
-	var myCription = new Cription();
-
-	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true}); 	
-	//Generates a random key and stores it to "localStorage.key". 
-	//Auto-generated keys will print to console.log on encryption.
-
-	var decrypted_secret = myCription.decrypt({secret:encrypted_secret});		
-	//decrypts the encrypted secret with key stored in "localStorage.key"
-```
-Sample 2:
-```javascript
-	var myCription = new Cription();
-	var myKey = myCription.generateKey(32);
-	//myCription.generateKey(32) creates a key of length 32. Accepts 16, 24 or 32.
-	var encrypted_secret = myCription.encrypt({secret:"mySecret",key:myKey});
-	var decrypted_secret = myCription.decrypt({secret:encrypted_secret,key:myKey});
-```
-Sample 3:
 ```javascript
 	var myCription = new Cription();
 	var encryptionOptions = {
@@ -53,4 +33,23 @@ Sample 3:
 	}
 	//decryptionOptions.key is optional if encryptionOptions.key has has been stored.
 	var decrypted_secret = myCription.decrypt(decryptionOptions);
+```
+Sample 2:
+```javascript
+	var myCription = new Cription();
+	var myKey = myCription.generateKey(32);
+	//myCription.generateKey(32) creates a key of length 32. Accepts 16, 24 or 32.
+	var encrypted_secret = myCription.encrypt({secret:"mySecret",key:myKey});
+	var decrypted_secret = myCription.decrypt({secret:encrypted_secret,key:myKey});
+```
+Sample 3:
+```javascript
+	var myCription = new Cription();
+
+	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true}); 	
+	//Generates a random key and stores it to "localStorage.key". 
+	//Auto-generated keys will print to console.log on encryption.
+
+	var decrypted_secret = myCription.decrypt({secret:encrypted_secret});		
+	//decrypts the encrypted secret with key stored in "localStorage.key"
 ```
