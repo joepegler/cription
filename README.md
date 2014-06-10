@@ -11,21 +11,21 @@ Sample 1:
 	var myCription = new Cription();
 	var encryptionOptions = {
 		secret : 	"mySecret",						
-		key :		"i0sq4mL5Ud6ZF6Qz", 			
+		key :		"myEncryptionKey1", 			
 		store : 	false							
 	};
 	//encryptionOptions.secret is mandatory
 	//encryptionOptions.key is optional and will be auto-generated if not manually provided. 
-	//encryptionOptions.key must be 16, 24 or 32 characters long
+	//encryptionOptions.key must be 16, 24 or 32 characters long & hexadecimal.
 	//encryptionOptions.store is optional and defaults to false. If set to true the key will be saved to localStorage("key")
 
-	myCription.encrypt(encryptionOptions);
+	var encrypted_secret = myCription.encrypt(encryptionOptions);
 
 	var decryptionOptions = {
-		secret : 	[147, 67, 167, 245, 65, 92, 194, 142, 2, 230, 201, 239, 22, 235, 234, 67],
-		key : 		"i0sq4mL5Ud6ZF6Qz",				//optional if encryptOptions.store == true
+		secret : 	encrypted_secret,
+		key : 		"myEncryptionKey1",				//optional if encryptOptions.store == true
 	}
-	myCription.decrypt(decryptionOptions);
+	var decrypted_secret = myCription.decrypt(decryptionOptions);
 ```
 
 Sample 2:
