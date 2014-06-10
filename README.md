@@ -6,11 +6,11 @@ Javascript AES Encryption
 A helper library based on the excellent implementation of the AES block cipher: http://point-at-infinity.org/jsaes/
 
 Three methods provided:
-
+```javascript
 Cription.encrypt(...);
 Cription.decrypt(...);
 Cription.generateKey(...);
-
+```
 Sample 1:
 
 ```javascript
