@@ -266,7 +266,7 @@ var Cription = (function Cription() {
 				_privateVars.aes.AES_ExpandKey(_privateVars.appData.key);
 				_privateVars.aes.AES_Encrypt(_privateVars.appData.secret, _privateVars.appData.key);
 				_privateVars.aes.AES_Done();
-	  			return _privateVars.appData.secret;
+	  			return _privateVars.appData.secret.toString();
 			}
 		};
 		_this.decrypt=function(options){
@@ -280,7 +280,7 @@ var Cription = (function Cription() {
 				}
 			}
 			if(_privateVars.validate.isValid("secret",options.secret) && _privateVars.validate.isValid("key",options.key)){
-				_privateVars.appData.secret=options.secret;
+				_privateVars.appData.secret=JSON.parse("[" + options.secret + "]");
 				_privateVars.appData.key=_privateVars.util.stringToBytes(options.key);
 				_privateVars.aes.AES_ExpandKey(_privateVars.appData.key);
 				_privateVars.aes.AES_Decrypt(_privateVars.appData.secret, _privateVars.appData.key);
