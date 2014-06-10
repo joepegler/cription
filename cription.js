@@ -249,7 +249,7 @@ var Cription = (function Cription() {
         var _this = this; //Cache the `this` keyword
 		_this.encrypt = function(options){
 			_privateVars.aes.AES_Init();
-			if(!options.key){
+			if(!options.key||options.key==""){
 				var tempKey = _privateVars.util.randomStr(16);
 				if (_privateVars.validate.isValid("key",tempKey)){
 					console.log("This is your private key, keep it safe: "+tempKey);
