@@ -24,9 +24,7 @@ Sample 1:
 	//encryptionOptions.key must be 16, 24 or 32 characters long & hexadecimal.
 	//encryptionOptions.store is optional and defaults to false. 
 	//encryptionOptions.store == true saves the key to localStorage("key").
-
 	var encrypted_secret = myCription.encrypt(encryptionOptions);
-
 	var decryptionOptions = {
 		secret : 	encrypted_secret,
 		key : 		"myEncryptionKey1",				
@@ -45,11 +43,9 @@ Sample 2:
 Sample 3:
 ```javascript
 	var myCription = new Cription();
-
-	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true}); 	
+	var encrypted_secret = myCription.encrypt({secret:"mySecret", store:true});	
 	//Generates a random key and stores it to "localStorage.key". 
 	//Auto-generated keys will print to console.log on encryption.
-
 	var decrypted_secret = myCription.decrypt({secret:encrypted_secret});		
 	//decrypts the encrypted secret with key stored in "localStorage.key"
 ```
