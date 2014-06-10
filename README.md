@@ -21,7 +21,7 @@ Sample 2:
 ```javascript
 	var myCription = new Cription();
 	var myKey = myCription.generateKey(32);
-	//myCription.generateKey(32) creates a key of length 16, 24 or 32.
+	//myCription.generateKey(32) creates a key of length 32. Accepts 16, 24 or 32.
 	var encrypted_secret = myCription.encrypt({secret:"mySecret",key:myKey});
 	var decrypted_secret = myCription.decrypt({secret:encrypted_secret,key:myKey});
 ```
