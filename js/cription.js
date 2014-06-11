@@ -271,7 +271,7 @@ var Cription = (function Cription() {
 		};
 		_this.decrypt=function(options){
 			_privateVars.aes.AES_Init();
-			if(!options.key){
+			if(!options.key||options.key==""||options.key==='undefined'){
 				if( _privateVars.validate.isValid("key",localStorage.getItem('key')) ){
 					options.key = localStorage.getItem('key');
 				}
