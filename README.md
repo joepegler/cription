@@ -60,6 +60,14 @@ var myKey = myCription.generateKey(n);
 ###Description
 Use this if a random, non-customized password is required. If n is not one of 16, 24 or 32 an error is thrown.
 <!-- 
+=======
+Cription
+========
+
+Javascript AES Encryption
+
+A stand-alone library based on the implementation of the AES block cipher @: http://point-at-infinity.org/jsaes/
+>>>>>>> da98543d2775312a1b206f898227f35ce169a953
 
 Three methods provided:
 ```javascript
@@ -108,4 +116,6 @@ Sample 3:
 	//decrypts the encrypted secret with key stored in "localStorage.key"
 	console.log(decrypted_secret);//"mySecret"
 ```
+<<<<<<< HEAD
  -->
+
