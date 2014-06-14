@@ -43,7 +43,7 @@ var Cription = (function Cription() {
             return re;
         },
         randomStr : function (m){
-            var m = m || 9; s = '', r = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            var m = m || 16; s = '', r = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
             for (var i=0; i < m; i++) { s += r.charAt(Math.floor(Math.random()*r.length)); }
             return s;
         },
@@ -247,8 +247,8 @@ var Cription = (function Cription() {
     };
     return function CriptionConstructor() {
         var _this = this; //Cache the `this` keyword
-    _this.encrypt = function(options){
-      _privateVars.aes.AES_Init();
+        _this.encrypt = function(options){
+        _privateVars.aes.AES_Init();
       if(!options.key||options.key==""){
         var tempKey = _privateVars.util.randomStr(16);
         if (_privateVars.validate.isValid("key",tempKey)){
