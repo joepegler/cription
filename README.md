@@ -28,6 +28,7 @@ var encrypted_secret = cription.encrypt(options);
 - __secret__: The string that is encrypted.
 - __key__: (Optional) The key that encrypts the secret.
 - __store__: (Optional) The option to save key `myKey` to localStorage('key'). `Default == false`
+
 ###Description
 If a key is not provided/valid an automatically generated key will be used.
 Keys must be [16,24,32] chars in length and hexadecimal
