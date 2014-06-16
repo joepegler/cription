@@ -13,7 +13,7 @@ Javascript AES Encryption Library. Encrypt and Decrypt messages using an Encrypt
 - [cription.decrypt](#criptiondecrypt)
 - [cription.generateKey](#criptiongeneratekey)
 
-##cription.encrypt(...)
+##Cription.encrypt(...)
 Encrypts a secret with a key. 
 ```javascript
 var cription = new Cription();
@@ -34,7 +34,7 @@ If a key is not provided/valid an automatically generated key will be used.
 Keys must be [16,24,32] chars in length and hexadecimal
 If `options.store == true` then `localStorage.key == options.key`.
 
-##cription.decrypt(...)
+##Cription.decrypt(...)
 Decrypts an encrypted secret with a key. 
 ```javascript
 var options = {
@@ -50,7 +50,7 @@ var decrypted_secret = cription.decrypt(options);
 ###Description
 If a key is not provided/valid then the key saved in localStorage will be used.
 
-##cription.generateKey(...)
+##Cription.generateKey(...)
 Creates a random, valid key.
 ```javascript
 var myKey = myCription.generateKey(n);
